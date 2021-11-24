@@ -12,3 +12,7 @@
   assert (actual.Equals expected == true)
 )
 ```
+
+## ライセンス
+
+[MIT License](https://github.com/imaoki/TestValue/blob/main/LICENSE)
