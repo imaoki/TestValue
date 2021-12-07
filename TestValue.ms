@@ -289,6 +289,9 @@ struct TestValueStruct (
           result += " #(" + keyText + ", " + valueText + ")"
         )
       )
+      (Float): (
+        result += formattedPrint input format:"f"
+      )
       (StringStream): (
         result += "StringStream "
         result += "\"" + (this.valueToString (input as String)) + "\""
