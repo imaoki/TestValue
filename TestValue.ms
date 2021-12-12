@@ -27,7 +27,7 @@ struct TestValueStruct (
   public fn CountEquals count = (
     local result = false
     case of (
-      (this.IsArray()): result = this.v.Count == count
+      (this.IsArrayOrArrayParameter()): result = this.v.Count == count
       (this.IsBitArray()): result = this.v.NumberSet == count
       (this.IsDictionary()): result = this.v.Count == count
       default: ()
@@ -43,7 +43,7 @@ struct TestValueStruct (
   public fn CountGreaterOrEquals count = (
     local result = false
     case of (
-      (this.IsArray()): result = this.v.Count >= count
+      (this.IsArrayOrArrayParameter()): result = this.v.Count >= count
       (this.IsBitArray()): result = this.v.NumberSet >= count
       (this.IsDictionary()): result = this.v.Count >= count
       default: ()
@@ -59,7 +59,7 @@ struct TestValueStruct (
   public fn CountGreaterThan count = (
     local result = false
     case of (
-      (this.IsArray()): result = this.v.Count > count
+      (this.IsArrayOrArrayParameter()): result = this.v.Count > count
       (this.IsBitArray()): result = this.v.NumberSet > count
       (this.IsDictionary()): result = this.v.Count > count
       default: ()
@@ -75,7 +75,7 @@ struct TestValueStruct (
   public fn CountLessOrEquals count = (
     local result = false
     case of (
-      (this.IsArray()): result = this.v.Count <= count
+      (this.IsArrayOrArrayParameter()): result = this.v.Count <= count
       (this.IsBitArray()): result = this.v.NumberSet <= count
       (this.IsDictionary()): result = this.v.Count <= count
       default: ()
@@ -91,7 +91,7 @@ struct TestValueStruct (
   public fn CountLessThan count = (
     local result = false
     case of (
-      (this.IsArray()): result = this.v.Count < count
+      (this.IsArrayOrArrayParameter()): result = this.v.Count < count
       (this.IsBitArray()): result = this.v.NumberSet < count
       (this.IsDictionary()): result = this.v.Count < count
       default: ()
