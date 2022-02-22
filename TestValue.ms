@@ -561,3 +561,5 @@ struct TestValueStruct (
     this.v = this._CP1_
   )
 )
+format "[define]::TestValueStruct\n"
+::TestValueStruct
