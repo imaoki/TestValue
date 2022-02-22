@@ -6,6 +6,14 @@
 
 `3ds Max 2022.3 Update`
 
+## スクリプトの実行とスタートアップへの登録
+
+`register.ms`を実行する。
+
+## スタートアップから登録解除する
+
+`unregister.ms`を実行する。
+
 ## 使い方
 
 ```maxscript
