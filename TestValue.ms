@@ -28,6 +28,7 @@ struct TestValueStruct (
   public fn GetValue = (),
   public fn HasEquals = (),
   public fn HasProp propName = (),
+  public fn Install = (),
   public fn Uninstall = (),
 
   public fn IsAngleAxis = (),
@@ -185,6 +186,30 @@ struct TestValueStruct (
   */
   public fn HasProp propName = (
     isProperty this.v propName
+  ),
+
+  /*-
+  インストールする。
+  @returns <OkClass>
+  @remarks 静的メソッド。
+  */
+  public fn Install = (
+    if isProperty ::startupLoader "RegisterFile" do (
+      ::startupLoader.RegisterFile (getSourceFileName()) installer:true
+    )
+    ok
+  ),
+
+  /*-
+  アンインストールする。
+  @returns <OkClass>
+  @remarks 静的メソッド。
+  */
+  public fn Uninstall = (
+    if isProperty ::startupLoader "UnregisterFile" do (
+      ::startupLoader.UnregisterFile (getSourceFileName())
+    )
+    ok
   ),
 
   /*- @returns <BooleanClass> */
