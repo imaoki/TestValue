@@ -197,6 +197,7 @@ struct TestValueStruct (
     if isProperty ::startupLoader "RegisterFile" do (
       ::startupLoader.RegisterFile (getSourceFileName()) installer:true
     )
+    format "[install]::TestValueStruct\n"
     ok
   ),
 
@@ -209,6 +210,7 @@ struct TestValueStruct (
     if isProperty ::startupLoader "UnregisterFile" do (
       ::startupLoader.UnregisterFile (getSourceFileName())
     )
+    format "[uninstall]::TestValueStruct\n"
     ok
   ),
 
@@ -647,5 +649,3 @@ struct TestValueStruct (
     this.v = this._CP1_
   )
 )
-format "[define]::TestValueStruct\n"
-::TestValueStruct
