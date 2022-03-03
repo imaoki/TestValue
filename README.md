@@ -31,8 +31,8 @@
 ```maxscript
 (
   local actual = ::TestValueStruct (findString "abc" "b")
-  assert (actual.IsInteger() == true)
   local expected = ::TestValueStruct 2
+  assert (actual.IsInteger() == true)
   assert (actual.Equals expected == true)
 )
 ```
