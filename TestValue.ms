@@ -194,7 +194,7 @@ struct TestValueStruct (
   @remarks 静的メソッド。
   */
   public fn Install = (
-    if isProperty ::startupLoader "RegisterFile" do (
+    if isProperty ::startupLoader #RegisterFile do (
       ::startupLoader.RegisterFile (getSourceFileName()) installer:true
     )
     format "[install]::TestValueStruct\n"
@@ -207,7 +207,7 @@ struct TestValueStruct (
   @remarks 静的メソッド。
   */
   public fn Uninstall = (
-    if isProperty ::startupLoader "UnregisterFile" do (
+    if isProperty ::startupLoader #UnregisterFile do (
       ::startupLoader.UnregisterFile (getSourceFileName())
     )
     format "[uninstall]::TestValueStruct\n"
