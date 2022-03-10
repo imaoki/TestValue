@@ -396,6 +396,9 @@ struct TestValueStruct (
     result
   ),
 
+  /*- @prop <String> バージョン番号。メジャー、マイナー、パッチの順。 */
+  private version = "1.0.0",
+
   /*- @returns <Name> */
   public fn StructName = #TestValueStruct,
 
@@ -642,6 +645,13 @@ struct TestValueStruct (
     )
 
     isEqualStructName and isEqualProperties
+  ),
+
+  /*-
+  @returns <String>
+  */
+  public fn GetVersion = (
+    this.version
   ),
 
   on Create do (
