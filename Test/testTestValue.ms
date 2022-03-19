@@ -754,9 +754,17 @@
 
   /* StringStream */
   -- 型判定
-  testObj = testDef (StringStream "")
+  testObj = testDef (StringStream "a")
   actual = testObj.IsStringStream()
   expected = true
+  assert (actual == expected)
+  -- 同値
+  actual = testObj.Equals (testDef (StringStream "a"))
+  expected = true
+  assert (actual == expected)
+  -- 異なる値
+  actual = testObj.Equals (testDef (StringStream "b"))
+  expected = false
   assert (actual == expected)
 
   /* StructDefinition */

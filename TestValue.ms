@@ -397,7 +397,7 @@ struct TestValueStruct (
   ),
 
   /*- @prop <String> バージョン番号。メジャー、マイナー、パッチの順。 */
-  private version = "1.0.0",
+  private version = "1.1.0",
 
   /*- @returns <Name> */
   public fn StructName = #TestValueStruct,
@@ -632,6 +632,11 @@ struct TestValueStruct (
           else (
             ov == tv
           )
+        )
+        (this.IsStringStream() and obj.IsStringStream()): (
+          local t1 = testValueDef (tv as String) IgnoreCase:this.IgnoreCase
+          local o1 = testValueDef (ov as String) IgnoreCase:this.IgnoreCase
+          t1.Equals o1
         )
         default: (
           if this.HasEquals() and not this.IsDotNetClass() then (
