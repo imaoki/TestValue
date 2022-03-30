@@ -1,5 +1,8 @@
 # TestValue
 
+<!-- [![GitHub release (latest by date)](https://img.shields.io/github/v/release/imaoki/TestValue)](https://github.com/imaoki/TestValue/releases/latest) -->
+[![GitHub](https://img.shields.io/github/license/imaoki/TestValue)](https://github.com/imaoki/TestValue/blob/main/LICENSE)
+
 Struct for testing that provides functionality for various assertions.
 <!-- 各種アサーション用の機能を提供するテスト用の構造体。 -->
 
