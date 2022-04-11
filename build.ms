@@ -20,5 +20,7 @@
   /* 最小化ファイルを保存 */
   code = mp.Minify code
   mp.WriteAllText @".\Distribution\TestValue.min.ms" code
+  /* ファイルコピー */
+  -- mp.CopyDirectory @".\TestValue.SubDir" @".\Distribution\TestValue.SubDir"
   ok
 )
