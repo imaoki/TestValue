@@ -396,8 +396,8 @@ struct TestValueStruct (
     result
   ),
 
-  /*- @prop <String> バージョン番号。メジャー、マイナー、パッチの順。 */
-  private version = "1.1.0",
+  /*- @prop <Array[<Integer>]> バージョン番号。メジャー、マイナー、パッチの順。 */
+  private version = #(1, 1, 0),
 
   /*- @returns <Name> */
   public fn StructName = #TestValueStruct,
@@ -653,7 +653,7 @@ struct TestValueStruct (
   ),
 
   /*-
-  @returns <String>
+  @returns <Array[<Integer>]>
   */
   public fn GetVersion = (
     this.version
